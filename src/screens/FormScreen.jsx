@@ -1,9 +1,10 @@
-import { Button, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useState } from 'react';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment';
 import Modal from 'react-native-modal';
 import _ from 'lodash';
+import Button from '../components/Button';
 
 export default function FormScreen() {
   // STATES
@@ -83,7 +84,9 @@ export default function FormScreen() {
       </Pressable>
 
       {/*Submit Button*/}
-      <Button title='Submit' onPress={onSubmitForm}/>
+      <Button onPress={onSubmitForm}>
+        Submit
+      </Button>
 
       {/*Birthday Modal*/}
       {isBirthdayModalVisible && (
